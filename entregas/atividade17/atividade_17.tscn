@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3wle16kx811m"]
+
+[ext_resource type="Script" uid="uid://bkx6e8pchglmi" path="res://atividade17/atividade_17.gd" id="1_xb0qa"]
+
+[node name="Atividade17" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -17.0
+offset_right = 23.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00722828
+script = ExtResource("1_xb0qa")
+
+[node name="numero 1" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 11.725
+offset_top = 38.0857
+offset_right = 393.725
+offset_bottom = 127.086
+text = "informe n°1"
+
+[node name="numero 2" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.02
+anchor_top = 0.027
+anchor_right = -0.02
+anchor_bottom = 0.027
+offset_left = 33.9554
+offset_top = 132.587
+offset_right = 413.955
+offset_bottom = 223.587
+text = "informe n°2"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.02
+anchor_top = 0.028
+anchor_right = -0.02
+anchor_bottom = 0.028
+offset_left = 453.646
+offset_top = 37.97
+offset_right = 579.646
+offset_bottom = 75.97
+rotation = 0.00570785
+item_count = 4
+popup/item_0/text = "soma"
+popup/item_0/id = 0
+popup/item_1/text = "subt."
+popup/item_1/id = 1
+popup/item_2/text = "mult."
+popup/item_2/id = 2
+popup/item_3/text = "divisão"
+popup/item_3/id = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 445.803
+offset_top = 167.227
+offset_right = 514.803
+offset_bottom = 199.227
+rotation = 0.0159073
+scale = Vector2(1.54192, 1.45271)
+text = "calcular"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.032
+anchor_right = -0.014
+anchor_bottom = 0.035
+offset_left = 82.6581
+offset_top = 305.339
+offset_right = 417.922
+offset_bottom = 376.659
+rotation = 0.0111657
+text = "resultado"
