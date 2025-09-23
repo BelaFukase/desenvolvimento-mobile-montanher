@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1qeieqbi6kx8"]
+
+[ext_resource type="Script" uid="uid://b70ptm18v4u2b" path="res://atividade19/atividade_19.gd" id="1_gavo3"]
+
+[node name="Atividade19" type="Node2D"]
+script = ExtResource("1_gavo3")
+
+[node name="min" type="Label" parent="."]
+offset_left = 149.0
+offset_top = 128.0
+offset_right = 196.0
+offset_bottom = 154.0
+text = "0"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="seg" type="Label" parent="."]
+offset_left = 204.0
+offset_top = 126.0
+offset_right = 244.0
+offset_bottom = 149.0
+text = "0"
+
+[node name="dseg" type="Label" parent="."]
+offset_left = 230.0
+offset_top = 126.0
+offset_right = 270.0
+offset_bottom = 149.0
+text = "0"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
