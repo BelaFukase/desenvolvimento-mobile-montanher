@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4b5tn0m2lmn"]
+
+[ext_resource type="Script" uid="uid://dah27o4tud1ag" path="res://atividade20/atividade_20.gd" id="1_2sqih"]
+
+[node name="Atividade20" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sqih")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="linha1" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="Panel/VBoxContainer/linha1"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nome
+"
+
+[node name="nomeEdit" type="TextEdit" parent="Panel/VBoxContainer/linha1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Nome:"
+
+[node name="linha2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="idade" type="Label" parent="Panel/VBoxContainer/linha2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "idade
+
+"
+
+[node name="idadeEdit" type="TextEdit" parent="Panel/VBoxContainer/linha2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Idade:"
+
+[node name="linha3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/linha3"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Enviar"
+
+[node name="ResultadoLabel" type="Label" parent="Panel/VBoxContainer/linha3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "resultado"
+
+[connection signal="pressed" from="Panel/VBoxContainer/linha3/Button" to="." method="_on_button_pressed"]

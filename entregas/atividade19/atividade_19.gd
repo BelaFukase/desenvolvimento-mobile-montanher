@@ -1,6 +1,6 @@
 extends Node2D
-var dseg = 0
-var seg = 50
+var  dseg = 0
+var seg = 0
 var min = 0
 
 
