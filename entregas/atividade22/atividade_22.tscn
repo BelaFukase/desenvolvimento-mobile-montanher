@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://bvkuqpax6wtyh"]
+[gd_scene load_steps=4 format=3 uid="uid://bvkuqpax6wtyh"]
 
-[node name="Atividade22" type="Node2D"]
+[ext_resource type="Script" uid="uid://b4qboy18lv8r0" path="res://atividade22/atividade_22.gd" id="1_nqsg2"]
+[ext_resource type="Texture2D" uid="uid://lbbcxyv6avtr" path="res://atividade22/meteor-solid-full.svg" id="2_yhybs"]
+
+[sub_resource type="Gradient" id="Gradient_64ccp"]
+offsets = PackedFloat32Array(0, 0.406667, 1)
+colors = PackedColorArray(0.142448, 0.485602, 0.521575, 1, 0.639657, 0.544911, 0.0911852, 1, 1, 0.39, 0.39, 1)
+
+[node name="Atividade22" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nqsg2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 15
+texture = ExtResource("2_yhybs")
+lifetime = 5.0
+one_shot = true
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+spread = 61.36
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_min = 50.0
+angular_velocity_max = 100.0
+linear_accel_min = 20.0
+linear_accel_max = 40.0
+angle_min = 9.0
+angle_max = 9.0
+scale_amount_min = 0.07
+scale_amount_max = 0.15
+color_ramp = SubResource("Gradient_64ccp")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -101.0
+offset_top = -70.0
+offset_right = -60.0
+offset_bottom = -43.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -190.0
+offset_top = -2.0
+offset_right = -135.0
+offset_bottom = 29.0
+text = "Ativar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
