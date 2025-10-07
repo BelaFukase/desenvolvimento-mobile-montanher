@@ -13,6 +13,7 @@ anchors_preset = 0
 script = ExtResource("1_nqsg2")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(231, 243)
 emitting = false
 amount = 15
 texture = ExtResource("2_yhybs")
@@ -37,17 +38,18 @@ color_ramp = SubResource("Gradient_64ccp")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = -101.0
-offset_top = -70.0
-offset_right = -60.0
-offset_bottom = -43.0
+offset_left = 819.0
+offset_top = 510.0
+offset_right = 1020.0
+offset_bottom = 603.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -190.0
-offset_top = -2.0
-offset_right = -135.0
-offset_bottom = 29.0
+offset_left = 83.0
+offset_top = 526.0
+offset_right = 138.0
+offset_bottom = 557.0
 text = "Ativar"
 
+[connection signal="value_changed" from="ProgressBar" to="." method="_on_progress_bar_value_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
